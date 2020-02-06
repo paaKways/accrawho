@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AccraWHO</title>
+    <style>
+            html, body {
+                margin:0; padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                background : #f8f8f8;
+            }
+            .nav {
+                display: flex;
+                align-items: center;        
+                background : #f8f8f8;
+            }
+
+            .nav-lis {
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                list-style: none;      
+                padding-left: 100px;
+                padding-right: 100px;
+            }    
+            .pull-right {
+                justify-content: flex-end;
+            }
+            .pull-left {
+                justify-content: flex-start;
+            }    
+            .nav-li  {
+                font-size: 20px;
+                text-decoration: none;
+                color: #333;
+                padding: 10px;
+                height: 100%;
+                transition: 0.3s;
+            }
+            .nav-li:hover {
+                background: #555;
+                color: #fff;
+                transition: 0.3s;
+            }
+            .hero {
+                background: url('accrawhobg.jpg');
+                background-attachment: scroll;
+                min-height: 600px;
+                background-size: cover;
+                background-repeat: no-repeat;
+              
+            }
+            .home-li {
+                padding-left: 20px;
+            }
+            .home-li:hover {
+                cursor: pointer;
+            }
+            .hero {
+                position: relative;
+            }
+            .hero-content {
+                position: absolute;
+                text-align: center;
+                left: 0;
+                right: 0;
+                color: #fff;
+            }
+            .hero-content h1 {
+                font-size: 8vw;
+            }
+            #toggle-nav {
+                display: none;
+                border: 0.1px solid #333;
+                padding: 10px;
+                transition: 0.3s;
+            }
+            #toggle-nav:hover {
+                background: #333;       
+                color: #fff;
+            }
+
+            /*Mobile nav*/
+            @media screen and (max-width: 600px) {
+                .nav-li:hover {
+                    width: 100%;
+                    text-align: center;
+                    background: #555;
+                    color: #fff;
+                }
+                .nav {
+                    display: block;
+                }
+                .home-li {
+                    padding:0;
+                }
+                .nav-li {
+                    display: none;
+                }
+                #toggle-nav, .home-li{
+                    display: block;
+                }
+                .nav-lis {
+                    padding: 7px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-lis pull-left">
+            <h2 class="home-li">accrawho</h2>
+            <button id="toggle-nav" class="closed" href='#'>Mobile menu</button>
+        </div>
+        <div class="nav-lis pull-right">
+            <a class="nav-li" href="#">Register</a>
+            <a class="nav-li" href="#">Dates</a>
+            <a class="nav-li" href="#">Contact</a>
+        </div>
+    </nav>
+        <main class="hero">  
+            <div class="hero-content">
+                <h1>AccraWho</h1>
+            </div>
+        </main>
+
+        <script type="text/javascript">
+            let toggleNavBtn = document.getElementById('toggle-nav')
+            toggleNavBtn.addEventListener('click', handleToggleNavBtn)
+
+            function handleToggleNavBtn (clickEvent) {
+                let navLinks = document.querySelectorAll('.nav-li')
+                if (clickEvent.target.className == 'closed'){ 
+                    clickEvent.target.className = 'open'
+                    navLinks.forEach( function (navLink) { 
+                        navLink.style.display = 'block' 
+                    })
+                } else {                
+                    clickEvent.target.className = 'closed'
+                    navLinks.forEach( function (navLink) { 
+                        navLink.style.display = 'none' 
+                    })
+                }            
+            }
+        </script>
+    </body>
+</html>
