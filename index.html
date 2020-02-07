@@ -9,16 +9,15 @@
             html, body {
                 margin:0; padding: 0;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-                background : #f8f8f8;
+                overflow-x: hidden;
             }
             .nav {
                 display: flex;
-                align-items: center;        
-                background : #f8f8f8;
+                align-items: center; 
+                background: transparent;
             }
-
             .nav-lis {
-                width: 100vw;
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -31,23 +30,26 @@
             }
             .pull-left {
                 justify-content: flex-start;
+                transition: 0.3s;
             }    
             .nav-li  {
                 font-size: 20px;
                 text-decoration: none;
-                color: #333;
-                padding: 10px;
+                color: #fff;
+                padding: 7px 15px 7px 15px;
                 height: 100%;
                 transition: 0.3s;
             }
             .nav-li:hover {
-                background: #555;
+                background: rgb(83, 14, 14, 0.6);
+                border-radius: 10px 10px 10px 10px;
                 color: #fff;
                 transition: 0.3s;
             }
             .hero {
                 background: url('accrawhobg.jpg');
-                background-attachment: scroll;
+                background-color: rgba(200,100,0,.8); /* Tint color*/
+                background-blend-mode:color-burn;
                 min-height: 600px;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -55,27 +57,38 @@
             }
             .home-li {
                 padding-left: 20px;
+                font-size: 40px;
+                -webkit-text-stroke: 1px #333;
+                -webkit-text-fill-color: white;
             }
+
             .home-li:hover {
                 cursor: pointer;
             }
             .hero {
                 position: relative;
             }
-            .hero-content {
+            .hero-content { 
                 position: absolute;
                 text-align: center;
-                left: 0;
-                right: 0;
                 color: #fff;
+                top: 40%;
+                left: 0;
+                right: 0;     
+               line-height: 1.5pt; 
             }
             .hero-content h1 {
-                font-size: 8vw;
+                font-size: 6vw;
+                padding: 10px;
+            }
+            .hero-content p {
+                font-size: 2.7vw;
+                padding: 10px;  
             }
             #toggle-nav {
                 display: none;
                 border: 0.1px solid #333;
-                padding: 10px;
+                padding: 10px 20px 10px 20px;
                 transition: 0.3s;
             }
             #toggle-nav:hover {
@@ -83,69 +96,119 @@
                 color: #fff;
             }
 
+            .row {
+                display: flex;
+                background: #f7f7f7;
+            }
+            #section1 {
+                min-height: 400px;
+            }
+            .btn {
+                font-size: 20px;
+                height: 16px;
+                padding: 12px 24px 16px 24px;
+                background: blueviolet;         
+                border-radius: 7px 7px 7px 7px;
+                color: #fff;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            .btn:hover {
+                background: rgb(86, 0, 167);
+            }
+
             /*Mobile nav*/
             @media screen and (max-width: 600px) {
                 .nav-li:hover {
                     width: 100%;
                     text-align: center;
-                    background: #555;
+                    background: rgb(83, 14, 14);
                     color: #fff;
                 }
                 .nav {
-                    display: block;
+                    flex-direction: column;
+                    padding: 0 20px 0 20px;;
                 }
                 .home-li {
                     padding:0;
+                    margin: 0;
                 }
                 .nav-li {
                     display: none;
+                    margin-bottom: 15px;
                 }
                 #toggle-nav, .home-li{
                     display: block;
                 }
+
+                #toggle-nav:hover{
+                    background-color: #fff;
+                    color: #333;
+                }
                 .nav-lis {
-                    padding: 7px;
+                    padding-top: 20px;
                     display: flex;
                     flex-direction: column;
+                    background: #333;
+                    opacity: 0.7;
+                }
+                .nav-lis.pull-left {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                    transition: 0.3s;
+                    transition-property: height;
                 }
             }
+            
         </style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-lis pull-left">
-            <h2 class="home-li">accrawho</h2>
-            <button id="toggle-nav" class="closed" href='#'>Mobile menu</button>
-        </div>
-        <div class="nav-lis pull-right">
-            <a class="nav-li" href="#">Register</a>
-            <a class="nav-li" href="#">Dates</a>
-            <a class="nav-li" href="#">Contact</a>
-        </div>
-    </nav>
         <main class="hero">  
+            <nav class="nav">
+                <div class="nav-lis pull-left">
+                    <h2 class="home-li">accrawho</h2>
+                    <img id="toggle-nav" data-open="false" href='#' src="hamburger.svg">
+                </div>
+                <div class="nav-lis pull-right">
+                    <a class="nav-li" href="#">Register</a>
+                    <a class="nav-li" href="#">Dates</a>
+                    <a class="nav-li" href="#">Contact</a>
+                </div>
+            </nav>
             <div class="hero-content">
-                <h1>AccraWho</h1>
-            </div>
+                <h1>AccraWHO is coming soon!</h1>  
+                <p>Watch this space</p>
+               <!--  <a class="btn" href="#">Sign up for the newsletter</a>
+             --></div>
         </main>
+        <section id="section1" class="main-section">
+            <div class="row">
 
+            </div>
+         </section>
+         <section id="section2" class="main-section">
+            <div class="row"></div>
+        </section>
         <script type="text/javascript">
             let toggleNavBtn = document.getElementById('toggle-nav')
-            toggleNavBtn.addEventListener('click', handleToggleNavBtn)
+            toggleNavBtn.addEventListener('click', handleToggleNav)
 
-            function handleToggleNavBtn (clickEvent) {
+            function handleToggleNav (clickEvent) {
                 let navLinks = document.querySelectorAll('.nav-li')
-                if (clickEvent.target.className == 'closed'){ 
-                    clickEvent.target.className = 'open'
+                let isOpen = clickEvent.target.dataset.open
+                toggleNavBtn.dataset.open = isOpen == "true" ? "false" : "true"
+                currentState = toggleNavBtn.dataset.open
+                
+                if(currentState == "true") {
                     navLinks.forEach( function (navLink) { 
                         navLink.style.display = 'block' 
                     })
-                } else {                
-                    clickEvent.target.className = 'closed'
+                } else {
                     navLinks.forEach( function (navLink) { 
                         navLink.style.display = 'none' 
                     })
-                }            
+                }       
             }
         </script>
     </body>
