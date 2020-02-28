@@ -4,3 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/user/public_html/accrawho/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp accrawhobg.jpg $DEPLOYPATH
+    - /bin/cp *.png $DEPLOYPATH
+    - /bin/cp *.css $DEPLOYPATH
