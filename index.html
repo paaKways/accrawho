@@ -4,211 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/jquery" type="text/javascript"></script>
+    <script src="https://unpkg.com/bootstrap" type="text/javascript"></script> -->
+    <link href="bootstrap.min.css" type="text/css" rel="stylesheet" >
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="main.css">
     <title>AccraWHO</title>
-    <style>
-            html, body {
-                margin:0; padding: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-                overflow-x: hidden;
-            }
-            .nav {
-                display: flex;
-                align-items: center; 
-                background: transparent;
-            }
-            .nav-lis {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                list-style: none;      
-                padding-left: 100px;
-                padding-right: 100px;
-            }    
-            .pull-right {
-                justify-content: flex-end;
-            }
-            .pull-left {
-                justify-content: flex-start;
-                transition: 0.3s;
-            }    
-            .nav-li  {
-                font-size: 20px;
-                text-decoration: none;
-                color: #fff;
-                padding: 7px 15px 7px 15px;
-                height: 100%;
-                transition: 0.3s;
-            }
-            .nav-li:hover {
-                background: rgb(83, 14, 14, 0.6);
-                border-radius: 10px 10px 10px 10px;
-                color: #fff;
-                transition: 0.3s;
-            }
-            .hero {
-                background: url('accrawhobg.jpg');
-                background-color: rgba(200,100,0,.8); /* Tint color*/
-                background-blend-mode:overlay;
-                min-height: 600px;
-                background-size: cover;
-                background-repeat: no-repeat;
-              
-            }
-            .home-li {
-                padding-left: 20px;
-                font-size: 40px;
-                color: #fff;
-            }
-
-            .home-li:hover {
-                cursor: pointer;
-            }
-            .hero {
-                position: relative;
-            }
-            .hero-content { 
-                position: absolute;
-                text-align: center;
-                color: #fff;
-                top: 40%;
-                left: 0;
-                right: 0;     
-               line-height: 1.5pt; 
-            }
-            .hero-content h1 {
-                font-size: 6vw;
-                padding: 10px;
-            }
-            .hero-content p {
-                font-size: 2.7vw;
-                padding: 10px;  
-            }
-            #toggle-nav {
-                display: none;
-                border: 0.1px solid #333;
-                padding: 10px 20px 10px 20px;
-                transition: 0.3s;
-            }
-            #toggle-nav:hover {
-                background: #333;       
-                color: #fff;
-            }
-
-            .row {
-                display: flex;
-                background: #f7f7f7;
-            }
-            #section1 {
-                min-height: 400px;
-            }
-            .btn {
-                font-size: 20px;
-                height: 16px;
-                padding: 12px 24px 16px 24px;
-                background: blueviolet;         
-                border-radius: 7px 7px 7px 7px;
-                color: #fff;
-                text-decoration: none;
-                transition: 0.3s;
-            }
-            .btn:hover {
-                background: rgb(86, 0, 167);
-            }
-
-            /*Mobile nav*/
-            @media screen and (max-width: 600px) {
-                .nav-li:hover {
-                    width: 100%;
-                    text-align: center;
-                    background: rgb(83, 14, 14);
-                    color: #fff;
-                }
-                .nav {
-                    flex-direction: column;
-                    padding: 0 20px 0 20px;;
-                }
-                .home-li {
-                    padding:0;
-                    margin: 0;
-                }
-                .nav-li {
-                    display: none;
-                    margin-bottom: 15px;
-                }
-                #toggle-nav, .home-li{
-                    display: block;
-                }
-
-                #toggle-nav:hover{
-                    background-color: #fff;
-                    color: #333;
-                }
-                .nav-lis {
-                    padding-top: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    background: #333;
-                    opacity: 0.7;
-                }
-                .nav-lis.pull-left {
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-content: center;
-                    transition: 0.3s;
-                    transition-property: height;
-                }
-            }
-            
-        </style>
+    
 </head>
 <body>
-        <main class="hero">  
-            <nav class="nav">
-                <div class="nav-lis pull-left">
-                    <h2 class="home-li">accrawho</h2>
-                    <img id="toggle-nav" data-open="false" href='#' src="hamburger.svg">
-                </div>
-                <div class="nav-lis pull-right">
-                    <a class="nav-li" href="#">Register</a>
-                    <a class="nav-li" href="#">Dates</a>
-                    <a class="nav-li" href="#">Contact</a>
-                </div>
-            </nav>
-            <div class="hero-content">
-                <h1>AccraWHO is coming soon!</h1>  
-                <p>Watch this space</p>
-               <!--  <a class="btn" href="#">Sign up for the newsletter</a>
-             --></div>
-        </main>
-        <section id="section1" class="main-section">
-            <div class="row">
-
+    <!-- Navigation -->
+   <nav class="navbar navbar-expand-md navbar-light">
+       <div class="container-fluid">
+           <a class="navbar-brand" href="#"><h3>accrawho</h3> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
             </div>
-         </section>
-         <section id="section2" class="main-section">
-            <div class="row"></div>
-        </section>
-        <script type="text/javascript">
-            let toggleNavBtn = document.getElementById('toggle-nav')
-            toggleNavBtn.addEventListener('click', handleToggleNav)
+       </div>
+   </nav>
 
-            function handleToggleNav (clickEvent) {
-                let navLinks = document.querySelectorAll('.nav-li')
-                let isOpen = clickEvent.target.dataset.open
-                toggleNavBtn.dataset.open = isOpen == "true" ? "false" : "true"
-                currentState = toggleNavBtn.dataset.open
+   <!-- Image Slider -->
+   <!-- div id="slides" class="carousel slide" data-ride="carousel">
+       
+        <ul class="carousel-indicators">
+           <li data-target="#slides" data-slide-to="0" class="active"></li>
+           <li data-target="#slides" data-slide-to="1"></li>
+           <li data-target="#slides" data-slide-to="2"></li>
+       </ul>
+
+       <div class="carousel-inner">
+           <div id="item-1" class="carousel-item active">
+               <img src="accrawhobg.jpg" >
+               <div class="carousel-caption">
+                   <h3 class="display-4">AccraWHO</h3>
+                   <p>Welcome to our website</p>
+                   <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+                   <button type="button" class="btn btn-primary btn-lg">Register</button>
+               </div>
+           </div>
+
+            <div id="item-2" class="carousel-item">
+                <img src="accrawhobg.jpg" >
+            </div>
+
+            <div id="item-3" class="carousel-item">
+                <img src="accrawhobg.jpg" >
+            </div>
+       </div>
+   </div> -->
+
+   <!-- Hero -->
+   <div id="hero" class="container-fluid"></div>
+
+   <!-- Jumbotron -->
+   <div class="section container">
+        <div class="row d-flex">
+            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
+                <h3>AccraWHO Model United Nations Conference</h3>
+                <img width="70" class="flat-icon" src="conference.png">
                 
-                if(currentState == "true") {
-                    navLinks.forEach( function (navLink) { 
-                        navLink.style.display = 'block' 
-                    })
-                } else {
-                    navLinks.forEach( function (navLink) { 
-                        navLink.style.display = 'none' 
-                    })
-                }       
-            }
-        </script>
-    </body>
+                <p class="lead">Model United Nations Conferences are student run simulations of the various organs of the United Nations. 
+                    The <strong>AccraWHO MUN</strong> is organised by the <a href="https://ugmsa.org">University of Ghana Medical Students Association </a>
+                    <br><br>
+                    <strong>All tertiary students irrespective of faculty of field of study are encouraged to participate.</strong>
+                </p>  
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="target-audience" class="container-fluid">
+        <div class="row jumbotron">
+            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
+                <h3>Target Audience</h3>
+                <img class="flat-icon" src="graduation-cap.png">
+                <p class="lead">All tertiary students irrespective of faculty of field of study</p>
+            </div>
+        </div>     
+    </div>  -->
+
+    <div id="social-impact" class="section container-fluid">
+        <div class="row d-flex">
+            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
+                
+                <h3>Social Impact</h3>
+                <p class="lead">Introduced in 1945, MUN has been an avenue for young leaders to engage in the building blocks of global change.</p>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="flat-icon card-img-top" src="contract.png">
+                            <h5 class="card-title">Diplomatic negotiation</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="flat-icon card-img-top" src="discuss.png">
+                            <h5 class="card-title">Debates</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="flat-icon card-img-top" src="thinking.png">
+                            <h5 class="card-title">Policy formation</h5>          
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="flat-icon card-img-top" src="consensus.png">
+                            <h5 class="card-title">Consensus building</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sign-up" class="section container-fluid">
+        <div class="row d-flex">
+            <div class="container col-xs-12 col-sm-8 col-md-8">
+                <h3>Stay in the loop</h3>
+                <p>Enter your email to stay informed on AccraWHO timelines</p>
+                
+                <div class="input-group mb-3">
+                    <input class="form-control" placeholder="someone@example.com" type="email">
+                    <div class="input-group-append">
+                        <input class="btn btn-primary btn-block" type="button" value="Submit">
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+<footer> UGMSA 2020</footer>    
+<!-- consensus - Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+<!--     negotiation Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+ <!--  Debate - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+<!--  Brain Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+<!--   Conference - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+<!-- Graduation - Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+</body>
 </html>

@@ -1,0 +1,50 @@
+#hero {    
+    width: 100%;
+    background-image: url('accrawhobg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+.row.jumbotron, .row {
+    margin-bottom: -40px;
+    padding: 40px;
+}
+.section {
+   margin-top: 40px;
+   margin-bottom: 40px;
+   padding: 30px;
+   text-align: left;
+}
+#social-impact {
+   border-top: 3px solid #d32aaa;
+
+}
+#target-audience {
+   border-top: 3px solid #d38a2a;
+}
+#sign-up {
+   background: #f7f7f7;
+   margin-bottom: 0;
+   padding-bottom: 60px;
+   border-top: 3px solid lawngreen;
+}
+.card {
+   padding: 10px;
+   background: #fff;
+   margin: 7px;
+}
+.card:hover {
+   background: #f7f7f7;
+ 
+}
+.flat-icon {
+    margin: 15px auto;
+    width: 70px;
+}
+footer {
+   padding: 15px;
+   background: #333;
+   color: #fff;
+   text-align: center;
+}
