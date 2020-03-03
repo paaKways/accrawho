@@ -24,7 +24,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Dates</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sign-up">Contact</a></li>
                 </ul>
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div class="jumbotron">
+    <div id="register" class="jumbotron">
         <div class="container">
             <div class="row">
                 <h3 class="col-md-6 text-center">Register for upcoming WHO</h3> 
@@ -102,18 +102,48 @@
             <h3>Stay in the loop</h3>
             <p>Enter your email to stay informed on AccraWHO timelines</p>
             
-            <form action="mail.php" method="POST">
+            <form id="email-form">
                 <div class="input-group mb-2">
-                    <input name="email" class="form-control" placeholder="someone@example.com" type="email">
+                    <input id="email-input" name="email" class="form-control" placeholder="someone@example.com" type="email">
                     <div class="input-group-append">
-                        <input class="btn btn-primary btn-block" type="button" value="Submit">
+                        <input class="btn btn-primary btn-block" type="submit" value="Submit">
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <footer> UGMSA 2020</footer>    
+    <footer> UGMSA 2020</footer>  
+
+    <script type="text/javascript">
+        const emailForm = document.getElementById('email-form')
+        const emailInput = document.getElementById('email-input')
+
+        emailForm.addEventListener('submit', handleFormSubmit);
+
+        function handleFormSubmit(e){
+            e.preventDefault();
+            console.log('Form submitted..')
+    
+            const fd = new FormData()
+            fd.append('email', emailInput.value)
+            
+            const params = {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: fd,
+                method: 'POST'
+            }
+            
+            const url = "https://accrawho.ugmsa.org/mail.php"
+
+            fetch(url, params)
+            .then(data => {return data.json()})
+            .then(res => {console.log(res)})
+
+        } 
+    </script>  
 <!-- consensus - Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 <!--     negotiation Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
  <!--  Debate - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
