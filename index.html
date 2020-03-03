@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/jquery" type="text/javascript"></script>
-    <script src="https://unpkg.com/bootstrap" type="text/javascript"></script>
-    <!-- <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" >
+    <script src="https://unpkg.com/bootstrap" type="text/javascript"></script> -->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" >
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script> -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>AccraWHO</title>
     
 </head>
 <body>
-    <!-- Navigation -->
+   <!-- Navigation -->
    <nav class="navbar navbar-expand-md navbar-light">
        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <img src="img/logo.jpeg" height="40"> accrawho</a>
+            <a class="navbar-brand" href="#"><img class="circle" src="img/logo.jpeg" height="40"> AccraWHO</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,140 +32,74 @@
        </div>
    </nav>
 
-   <!-- Image Slider -->
-   <!-- div id="slides" class="carousel slide" data-ride="carousel">
-       
-        <ul class="carousel-indicators">
-           <li data-target="#slides" data-slide-to="0" class="active"></li>
-           <li data-target="#slides" data-slide-to="1"></li>
-           <li data-target="#slides" data-slide-to="2"></li>
-       </ul>
-
-       <div class="carousel-inner">
-           <div id="item-1" class="carousel-item active">
-               <img src="accrawhobg.jpg" >
-               <div class="carousel-caption">
-                   <h3 class="display-4">AccraWHO</h3>
-                   <p>Welcome to our website</p>
-                   <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
-                   <button type="button" class="btn btn-primary btn-lg">Register</button>
-               </div>
-           </div>
-
-            <div id="item-2" class="carousel-item">
-                <img src="accrawhobg.jpg" >
-            </div>
-
-            <div id="item-3" class="carousel-item">
-                <img src="accrawhobg.jpg" >
-            </div>
-       </div>
-   </div> -->
-
    <!-- Hero -->
-   <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <div class="row">
-            <div id="jumbotron-caption" class="col-xs-12 col-md-6">
-                <h3>AccraWHO Model United Nations Conference</h3>
-                <p >Model United Nations Conferences are student run simulations of the various organs of the United Nations. 
-                    The <strong>AccraWHO MUN</strong> is organised by the <a href="https://ugmsa.org">University of Ghana Medical Students Association </a>
-                    <br><br>
-                </p>  
-                <button type="button" class="btn btn-light">Learn more</button>
-                <button type="button" class="btn btn-primary">Register</button>
-            </div>
-            <div id="jumbotron-img" class="col-xs-12 col-md-6"> 
+   <div id="hero" class="container-fluid">
+       <div class="overlay">
+            <div class="hero-caption">
+                <h3>Welcome to AccraWHO Model United Nations</h3>
+                <p>Model United Nations Conferences are student run simulations of the various organs of the United Nations.<br>
+                <br>The <strong>AccraWHO MUN</strong> is organised by the <a href="https://ugmsa.org">University of Ghana Medical Students Association </a></p>  
+               <!--  <button type="button" class="btn btn-light">Learn more</button>
+                <button type="button" class="btn btn-primary">Register</button> -->
             </div>
         </div>
-     
-    </div> 
   </div>
 
-   <!-- Jumbotron -->
-   <!-- <div id="target-audience" class="section container-fluid">
-        <div class="row d-flex">
-            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
-                <h3>AccraWHO Model United Nations Conference</h3>
-                <img width="70" class="flat-icon" src="img/conference.png">
-                
-                <p class="lead">Model United Nations Conferences are student run simulations of the various organs of the United Nations. 
-                    The <strong>AccraWHO MUN</strong> is organised by the <a href="https://ugmsa.org">University of Ghana Medical Students Association </a>
-                    <br><br>
-                    <strong>All tertiary students irrespective of faculty of field of study are encouraged to participate.</strong>
-                </p>  
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div id="target-audience" class="container-fluid">
-        <div class="row jumbotron">
-            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
-                <h3>Target Audience</h3>
-                <img class="flat-icon" src="graduation-cap.png">
-                <p class="lead">All tertiary students irrespective of faculty of field of study</p>
-            </div>
-        </div>     
-    </div>  -->
-
-    <!-- <div id="social-impact" class="section container-fluid">
-        <div class="row d-flex">
-            <div class="container text-center col-xs-12 col-sm-8 col-md-8">
-                
-                <h3>Social Impact</h3>
-                <p class="lead">Introduced in 1945, MUN has been an avenue for young leaders to engage in the building blocks of global change.</p>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-3">
-                        <div class="card">
-                            <img class="flat-icon card-img-top" src="img/contract.png">
-                            <h5 class="card-title">Diplomatic negotiation</h5>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3">
-                        <div class="card">
-                            <img class="flat-icon card-img-top" src="img/discuss.png">
-                            <h5 class="card-title">Debates</h5>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3">
-                        <div class="card">
-                            <img class="flat-icon card-img-top" src="img/thinking.png">
-                            <h5 class="card-title">Policy formation</h5>          
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3">
-                        <div class="card">
-                            <img class="flat-icon card-img-top" src="img/consensus.png">
-                            <h5 class="card-title">Consensus building</h5>
-                        </div>
-                    </div>
+    <!-- Background -->
+    <div class="section">
+        <div class="container col-xs-12 col-sm-8 col-md-8">
+            <h3 class="cl-primary">Background</h3>
+            <p class="mb-4">Introduced in 1945, MUN has been an avenue for young leaders to engage in the building blocks of global change. 
+                The art of consensus building, diplomatic negotiation, formal and informal debate and policy formation.</p>
+            <div class="mb-5 row">
+                <div class="col-md-3 text-center">
+                    <img class="icon" width="100" src="img/consensus.png">
+                    <h6>Consensus</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="icon" width="100" src="img/contract.png">
+                    <h6>Diplomatic negotation</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="icon" width="100" src="img/conference.png">
+                    <h6>Debates</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="icon" width="100" src="img/thinking.png">
+                    <h6>Policy Formation</h6>
                 </div>
             </div>
-        </div>
-    </div> -->
+            <br>
 
-    <!-- Background -->
-    <div class="container">
-        <div class="row">
+            <h5 class="cl-primary">AccraWHO as a Model World Health Organisation conference</h5>
+            <p class="mb-5">As one of the organs of the United Nations, the World Health Organization (WHO) is frequently tasked with finding solutions to health problems that pose global threats. The choice to simulate the World Health Assembly affords attendees the chance to build their understanding of medicine and public health policy, 
+                as well as increase their skills in international development and diplomacy.</p>
         
+
+            <h5 class="cl-primary">Format of conferences</h5>
+            <p class="mb-5">Participants come prepared to represent countries, news agencies or non-governmental organizations and while staying true to that role, debate and negotiate legislation which will be voted on by the entire committee. 
+                The simulation stays as true to correct UN procedure as possible, not only for the immersive effect, but also to keep proceedings running smoothly. The end goal is to produce a document of legislation, known as a resolution, which will be adopted by the committee and presented at the World Health Assembly for their consideration.</p>
+            
+            <h3 class="cl-primary">Target Audience</h3>
+            <p class="mb-2">
+                The 2020 edition is open to all students in the tertiary level irrespective of their faculty or field of study. 
+            </p>
         </div>
     </div>
 
-    <div id="sign-up" class="section container-fluid">
-        <div class="row">
-            <div class="container col-xs-12 col-sm-8 col-md-8">
-                <h3>Stay in the loop</h3>
-                <p>Enter your email to stay informed on AccraWHO timelines</p>
-                
-                <div class="input-group mb-3">
-                    <input class="form-control" placeholder="someone@example.com" type="email">
-                    <div class="input-group-append">
-                        <input class="btn btn-primary btn-block" type="button" value="Submit">
-                    </div>
+    <!-- Contact -->
+    <div id="sign-up" class="section"> 
+        <div class="container col-xs-12 col-sm-8 col-md-8">
+            <h3>Stay in the loop</h3>
+            <p>Enter your email to stay informed on AccraWHO timelines</p>
+            
+            <div class="input-group mb-2">
+                <input class="form-control" placeholder="someone@example.com" type="email">
+                <div class="input-group-append">
+                    <input class="btn btn-primary btn-block" type="button" value="Submit">
                 </div>
             </div>
-         </div>
+        </div>
     </div>
 <footer> UGMSA 2020</footer>    
 <!-- consensus - Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->

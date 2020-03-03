@@ -1,20 +1,72 @@
 html, body {
    box-sizing: border-box;
+   font-weight: 300;
 }
 
-.jumbotron {
-   background: #fff;
-}
 
-#jumbotron-img {
-   background: url('../img/candidate.png');
+#hero {
+   margin: 0; padding: 0;
+   background: url('../img/accrawhobg.jpg');
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
+   color: #e7e7e7;
+}
+
+
+.icon {
+   margin: 15px;
+   border: none !important;
+}
+
+.cl-primary {
+   color: #007bff;
 }
 
 nav {
-  border-bottom: 1px solid #f7f7f7;
+   background: #f7f7f7;
+}
+
+.btn, .form-control {
+   border-radius: 0;
+}
+
+.circle {
+   border-radius: 50%;
+   border: 0.5px solid #999;
+   vertical-align: center;
+}
+
+input.form-control {
+   background: #e7e7e7;
+   border: 0;
+}
+
+input.form-control:focus {
+   background: #e7e7e7;
+   border: 0;
+}
+
+.hero-caption {
+   padding: 20vh 0 0 25vh;
+}
+.hero-caption a {
+   color: #fff;
+}
+
+.overlay {
+   height: 400px;
+   color: #fff;
+   background: rgba(2,2,2, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+   .hero-caption {
+      padding: 70px 0 0 15px;
+   }
+   .overlay{
+      background: rgba(2,2,2, 0.5);
+   }
 }
 
 .section {
@@ -23,7 +75,6 @@ nav {
   padding: 30px;
   text-align: left;
 }
-
 
 #sign-up {
   background: #f7f7f7;
